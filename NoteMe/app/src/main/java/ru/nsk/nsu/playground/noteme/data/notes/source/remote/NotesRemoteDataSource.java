@@ -8,7 +8,7 @@
 
 package ru.nsk.nsu.playground.noteme.data.notes.source.remote;
 
-import ru.nsk.nsu.playground.noteme.data.INotesDataSource;
+import ru.nsk.nsu.playground.noteme.data.notes.INotesDataSource;
 
 public final class NotesRemoteDataSource implements INotesDataSource {
 

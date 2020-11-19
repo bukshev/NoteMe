@@ -6,11 +6,11 @@
 //  Copyright (c) 2020 Ivan Bukshev. All rights reserved.
 //
 
-package ru.nsk.nsu.playground.noteme.domain;
+package ru.nsk.nsu.playground.noteme.domain.notes;
 
 import java.util.List;
 
-import ru.nsk.nsu.playground.noteme.data.INotesDataSource;
+import ru.nsk.nsu.playground.noteme.data.notes.INotesDataSource;
 import ru.nsk.nsu.playground.noteme.data.common.DataLayerError;
 import ru.nsk.nsu.playground.noteme.domain.common.DomainLayerError;
 import ru.nsk.nsu.playground.noteme.domain.common.UseCase;

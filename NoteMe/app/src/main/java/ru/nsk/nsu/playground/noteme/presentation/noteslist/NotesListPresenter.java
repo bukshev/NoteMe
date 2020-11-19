@@ -12,8 +12,8 @@ import android.util.Log;
 
 import java.util.List;
 
-import ru.nsk.nsu.playground.noteme.data.NotesRepository;
-import ru.nsk.nsu.playground.noteme.domain.LoadNotesUseCase;
+import ru.nsk.nsu.playground.noteme.data.notes.NotesRepository;
+import ru.nsk.nsu.playground.noteme.domain.notes.LoadNotesUseCase;
 import ru.nsk.nsu.playground.noteme.domain.common.DomainLayerError;
 import ru.nsk.nsu.playground.noteme.domain.common.IUseCaseExecutor;
 import ru.nsk.nsu.playground.noteme.domain.common.UseCase;
@@ -43,7 +43,7 @@ public final class NotesListPresenter implements NotesListModuleContract.Present
     @Override
     public void onDestroy() {
         Log.v(LOG_TAG, "Destroying NotesRepository and nullify all use cases.");
-        // Можем прокидывать в UseCase, можем делать и в Presenter'е.
+        // Можем прокидывать команду в UseCase, можем делать и в Presenter'е.
         NotesRepository.destroyInstance();
         loadNotesUseCase = null;
     }

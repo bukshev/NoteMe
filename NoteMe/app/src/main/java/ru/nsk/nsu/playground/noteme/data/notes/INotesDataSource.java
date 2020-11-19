@@ -6,7 +6,7 @@
 //  Copyright (c) 2020 Ivan Bukshev. All rights reserved.
 //
 
-package ru.nsk.nsu.playground.noteme.data;
+package ru.nsk.nsu.playground.noteme.data.notes;
 
 import java.util.List;
 

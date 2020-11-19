@@ -16,9 +16,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import ru.nsk.nsu.playground.noteme.R;
-import ru.nsk.nsu.playground.noteme.data.INotesDataSource;
-import ru.nsk.nsu.playground.noteme.data.NotesRepository;
-import ru.nsk.nsu.playground.noteme.domain.LoadNotesUseCase;
+import ru.nsk.nsu.playground.noteme.data.notes.INotesDataSource;
+import ru.nsk.nsu.playground.noteme.data.notes.NotesRepository;
+import ru.nsk.nsu.playground.noteme.domain.notes.LoadNotesUseCase;
 import ru.nsk.nsu.playground.noteme.domain.common.IUseCaseExecutor;
 import ru.nsk.nsu.playground.noteme.domain.common.UseCaseExecutor;
 import ru.nsk.nsu.playground.noteme.model.Note;
@@ -36,7 +36,7 @@ public final class NotesListActivity extends AppCompatActivity implements NotesL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notes_list);
 
-        // Временно (!) инициализируем весь стек в Activity.
+        // Временно (!) инициализируем здесь весь стек в Activity.
 
         final IUseCaseExecutor useCaseExecutor = UseCaseExecutor.getInstance();
         final INotesDataSource notesDataSource = NotesRepository.getInstance();

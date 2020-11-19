@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.UUID;
 
-import ru.nsk.nsu.playground.noteme.data.INotesDataSource;
+import ru.nsk.nsu.playground.noteme.data.notes.INotesDataSource;
 import ru.nsk.nsu.playground.noteme.model.Note;
 import ru.nsk.nsu.playground.noteme.model.NotePriority;
 
