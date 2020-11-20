@@ -63,7 +63,7 @@ public final class NotesMockDataSource implements INotesDataSource {
                 "This is a title",
                 new Date(),
                 "This is a content.",
-                null
+                new byte[0]
         );
     }
 

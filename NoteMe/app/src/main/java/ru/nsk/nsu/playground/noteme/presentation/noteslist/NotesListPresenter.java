@@ -8,6 +8,8 @@
 
 package ru.nsk.nsu.playground.noteme.presentation.noteslist;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.util.Log;
 
 import java.util.List;
@@ -19,14 +21,16 @@ import ru.nsk.nsu.playground.noteme.domain.common.IUseCaseExecutor;
 import ru.nsk.nsu.playground.noteme.domain.common.UseCase;
 import ru.nsk.nsu.playground.noteme.model.Note;
 import ru.nsk.nsu.playground.noteme.presentation.common.PresentationLayerError;
+import ru.nsk.nsu.playground.noteme.presentation.notedetails.NoteDetailsActivity;
 
-public final class NotesListPresenter implements NotesListModuleContract.Presenter {
+public final class NotesListPresenter implements NotesListModuleContract.Presenter, NotesListModuleContract.Router {
 
     private static final String LOG_TAG = NotesListPresenter.class.getCanonicalName();
 
     private final NotesListModuleContract.View view;
     private final IUseCaseExecutor useCaseExecutor;
 
+    private Activity activity;
     private LoadNotesUseCase loadNotesUseCase;
 
     public NotesListPresenter(final NotesListModuleContract.View view,
@@ -68,6 +72,17 @@ public final class NotesListPresenter implements NotesListModuleContract.Present
                 view.showError(presentationLayerError);
             }
         });
+    }
+
+    @Override
+    public void setActivity(final Activity activity) {
+        this.activity = activity;
+    }
+
+    @Override
+    public void goToTheDetailsScreen(final Note note) {
+        final Intent intent = NoteDetailsActivity.getIntent(activity, note);
+        activity.startActivity(intent);
     }
 
     private PresentationLayerError getPresentationLayerError(final DomainLayerError domainLayerError) {

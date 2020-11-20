@@ -9,17 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".presentation.noteslist.NotesListActivity"
+        <activity android:name=".presentation.notedetails.NoteDetailsActivity"></activity>
+        <activity
+            android:name=".presentation.noteslist.NotesListActivity"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
     </application>
 
 </manifest>

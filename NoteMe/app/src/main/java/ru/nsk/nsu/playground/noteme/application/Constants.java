@@ -15,5 +15,9 @@ package ru.nsk.nsu.playground.noteme.application;
  */
 public final class Constants {
 
+    public final class Extra {
+        public static final String NOTE = "NoteExtraKey";
+    }
+
     private Constants() {}
 }

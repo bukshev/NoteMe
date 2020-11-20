@@ -10,4 +10,13 @@ package ru.nsk.nsu.playground.noteme.presentation.common;
 
 public final class PresentationLayerError {
 
+    private final String title;
+
+    public PresentationLayerError(final String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
 }

@@ -8,6 +8,8 @@
 
 package ru.nsk.nsu.playground.noteme.presentation.noteslist;
 
+import android.app.Activity;
+
 import java.util.List;
 
 import ru.nsk.nsu.playground.noteme.model.Note;
@@ -37,5 +39,10 @@ public interface NotesListModuleContract {
     interface Presenter extends IBasePresenter {
         void loadNotes();
         void onDestroy();
+    }
+
+    interface Router {
+        void setActivity(final Activity activity);
+        void goToTheDetailsScreen(final Note item);
     }
 }
